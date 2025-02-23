@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom"
 
 function Register() {
   const [name, setName] = useState("")
+  const [dni, setDni] = useState("")
+  const [phone, setPhone] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [confirmPassword, setConfirmPassword] = useState("")
@@ -42,9 +44,36 @@ function Register() {
           />
         </div>
         <div>
+          <label htmlFor="DNI">
+            Documento Nacional de Identidad
+          </label>
+          <input
+           type="number"
+           id="dni"
+           value={dni}
+            onChange={(e) => setDni(e.target.value)}
+            required
+            className="w-full p-2 border rounded"
+           />
+        </div>
+        <div>
+          <label htmlFor="phone">
+            Teléfono
+          </label>
+          <input
+           type="number"
+           id="phone"
+           value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            required
+            className="w-full p-2 border rounded"
+           />
+           </div>
+        <div>
           <label htmlFor="email" className="block mb-1">
             Correo Electrónico
           </label>
+
           <input
             type="email"
             id="email"
@@ -89,4 +118,3 @@ function Register() {
 }
 
 export default Register
-
