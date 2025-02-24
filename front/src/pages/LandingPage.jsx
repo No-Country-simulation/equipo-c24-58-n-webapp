@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import ButtonCrearCuenta from "../components/ButtonCrearCuenta"
+import ButtonCrearCuenta from "../components/ButtonCrearCuenta.module"
 
 function LandingPage() {
   return (
