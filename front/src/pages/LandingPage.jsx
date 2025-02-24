@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import ButtonCrearCuenta from "../components/ButtonCrearCuenta.module"
 
 function LandingPage() {
   return (
@@ -19,12 +20,13 @@ function LandingPage() {
         </div>
       </div>
       <div className="text-center">
-        <Link
-          to="/register"
-          className="bg-accent text-primary font-bold py-2 px-4 rounded hover:bg-accent-dark transition duration-300"
-        >
-          Crea tu cuenta ahora
-        </Link>
+        <ButtonCrearCuenta />
+        <p className="mt-4">
+          ¿Ya tienes una cuenta?{" "}
+          <Link to="/login" className="text-[#0056b3 font-bold hover:underline cursor-pointer transition duration-300">
+            Inicia sesión
+          </Link>
+        </p>
       </div>
     </div>
   )
