@@ -1,26 +1,26 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { useNavigate } from "react-router-dom"
-import { useAuth } from "../contexts/AuthContext"
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../contexts/AuthContext";
 
 function Login() {
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const [error, setError] = useState("")
-  const navigate = useNavigate()
-  const { login } = useAuth()
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+  const { login } = useAuth();
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    setError("")
+    e.preventDefault();
+    setError("");
     try {
-      login(email, password)
-      navigate("/dashboard")
-    } catch  {
-      setError("Error al iniciar sesión. Por favor, intente de nuevo.")
+      login(email, password);
+      navigate("/dashboard");
+    } catch {
+      setError("Error al iniciar sesión. Por favor, intente de nuevo.");
     }
-  }
+  };
 
   return (
     <div className="max-w-md mx-auto">
@@ -53,14 +53,16 @@ function Login() {
             className="w-full p-2 border rounded"
           />
         </div>
-        <button type="submit" className="w-full bg-primary text-white p-2 rounded hover:bg-primary-dark">
+        <button
+          type="submit"
+          className="w-full bg-[#17a2b8] cursor-pointer text-white p-2 rounded hover:bg-primary-dark">
           Iniciar Sesión
         </button>
       </form>
     </div>
-  )
+  );
 }
 
-export default Login
+export default Login;
 
 // Compare this snippet from src/pages/Register.jsx:
