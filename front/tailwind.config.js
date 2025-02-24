@@ -2,7 +2,8 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,jsx}",
+    "./src/**/*.{js,jsx,ts,tsx,css}",
+      // Incluye todos los archivos relevantes
   ],
   theme: {
     extend: {
@@ -14,4 +15,4 @@ export default {
     },
   },
   plugins: [],
-}
+};
