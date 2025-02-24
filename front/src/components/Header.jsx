@@ -1,11 +1,13 @@
-import { Link } from "react-router-dom"
-import { useAuth } from "../contexts/AuthContext"
+import { Link } from "react-router-dom";
+import { useAuth } from "../contexts/AuthContext";
+import {  User } from "lucide-react";
+import NotificationIcon from "./NotificationIcon";
 
 function Header() {
-  const { user, logout } = useAuth()
+  const { user, logout } = useAuth();
 
   return (
-    <header className="bg-primary text-white p-4">
+    <header className="bg-[#0056b3] text-white p-4">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold">
           Banco Amanecer
@@ -30,15 +32,22 @@ function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/profile" className="hover:text-accent">
-                    Perfil
-                  </Link>
-                </li>
+          <Link to="/profile" className="hover:text-accent flex items-center">
+            <User className="w-6 h-6" />
+          </Link>
+        </li>
+        <li>
+          <Link to="/notifications" className="hover:text-[#0056b3]">
+        <NotificationIcon />
+          </Link>
+        </li>
+
                 <li>
                   <button onClick={logout} className="hover:text-accent">
                     Cerrar Sesión
                   </button>
                 </li>
+
               </>
             ) : (
               <>
@@ -58,8 +67,7 @@ function Header() {
         </nav>
       </div>
     </header>
-  )
+  );
 }
 
-export default Header
-
+export default Header;
