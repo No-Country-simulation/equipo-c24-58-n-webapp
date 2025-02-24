@@ -20,7 +20,7 @@ function Register() {
       setError("Las contraseñas no coinciden")
       return
     }
-    // Aquí iría la lógica de registro
+    // Aquí ira la lógica de registro
     console.log("Registro exitoso", { name, email, password })
     navigate("/login")
   }
@@ -109,7 +109,7 @@ function Register() {
             className="w-full p-2 border rounded"
           />
         </div>
-        <button type="submit" className="w-full bg-primary text-white p-2 rounded hover:bg-primary-dark">
+        <button type="submit" className="w-full bg-[#17a2b8] text-white p-2 rounded hover:bg-primary-dark">
           Registrarse
         </button>
       </form>
