@@ -63,7 +63,8 @@ function Transfers() {
             rows="3"
           ></textarea>
         </div>
-        <button type="submit" className="w-full bg-primary text-white p-2 rounded hover:bg-primary-dark">
+       
+        <button type="submit" className="w-full bg-[#0056b3] text-white p-2 rounded hover:bg-primary-dark">
           Confirmar Transferencia
         </button>
       </form>
@@ -72,4 +73,3 @@ function Transfers() {
 }
 
 export default Transfers
-
