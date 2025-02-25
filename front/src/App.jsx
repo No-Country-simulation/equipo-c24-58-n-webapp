@@ -13,12 +13,14 @@ import Statistics from "./pages/Statistics";
 import Profile from "./pages/Profile";
 import Notifications from "./pages/Notifications";
 
+
 function App() {
   return (
     <AuthProvider>
       <Router>
         <div className="flex flex-col min-h-screen bg-gray-100">
           <Header />
+
           <main className="flex-grow container mx-auto px-4 py-8">
             <Routes>
               <Route path="/" element={<LandingPage />} />
@@ -26,9 +28,11 @@ function App() {
               <Route path="/register" element={<Register />} />
               <Route
                 path="/dashboard"
+
                 element={
                   <PrivateRoute>
                     <Dashboard />
+
                   </PrivateRoute>
                 }
               />
