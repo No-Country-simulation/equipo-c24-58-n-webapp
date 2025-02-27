@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "axios": "^1.7.9"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.26.9"
   }
 }
