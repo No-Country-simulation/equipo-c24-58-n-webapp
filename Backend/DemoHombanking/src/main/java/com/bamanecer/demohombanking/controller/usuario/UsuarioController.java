@@ -1,8 +1,8 @@
-package com.bamanecer.controller.usuario;
+package com.bamanecer.demohombanking.controller.usuario;
 
-import com.bamanecer.usuarios.DatosUsuario;
-import com.bamanecer.usuarios.IUsuarioRepository;
-import com.bamanecer.usuarios.Usuario;
+import com.bamanecer.demohombanking.usuarios.DatosUsuario;
+import com.bamanecer.demohombanking.usuarios.IUsuarioRepository;
+import com.bamanecer.demohombanking.usuarios.Usuario;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,8 +32,9 @@ public class UsuarioController {
     @PostMapping("/crear")
     @Transactional
     public ResponseEntity<DatosUsuario> crear(@RequestBody @Valid Usuario usuario, UriComponentsBuilder uriComponentsBuilder){
+
         Usuario usuarioCreado = usuarioRepository.save(usuario);
-        DatosUsuario datosUsuario = new DatosUsuario(usuarioCreado.getId(), usuarioCreado.getNombre(), usuarioCreado.getEmail(),usuarioCreado.getTelefono(),usuarioCreado.getDireccion(),usuarioCreado.getEstado());
+        DatosUsuario datosUsuario = new DatosUsuario(usuarioCreado.getId(), usuarioCreado.getNombre(), usuarioCreado.getEmail(),usuarioCreado.getTelefono(),usuarioCreado.getDireccion(),String.valueOf(usuarioCreado.getEstado()));
         URI url = uriComponentsBuilder.path("/usuario/{id}").buildAndExpand(usuario.getId()).toUri();
         return ResponseEntity.created(url).body(datosUsuario);
 

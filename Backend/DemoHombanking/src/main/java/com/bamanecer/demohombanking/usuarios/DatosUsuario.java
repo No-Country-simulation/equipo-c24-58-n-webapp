@@ -1,4 +1,4 @@
-package com.bamanecer.usuarios;
+package com.bamanecer.demohombanking.usuarios;
 
 public record DatosUsuario(
         Long id,

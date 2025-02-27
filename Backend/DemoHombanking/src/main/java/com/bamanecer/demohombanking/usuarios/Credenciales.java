@@ -1,4 +1,4 @@
-package com.bamanecer.usuarios;
+package com.bamanecer.demohombanking.usuarios;
 
 import jakarta.persistence.*;
 
