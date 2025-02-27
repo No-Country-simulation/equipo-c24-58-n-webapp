@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-
       <module fileurl="file://$PROJECT_DIR$/.idea/equipo-c24-58-n-webapp.iml" filepath="$PROJECT_DIR$/.idea/equipo-c24-58-n-webapp.iml" />
-
       <module fileurl="file://$PROJECT_DIR$/.idea/equipo-c24-58-n-webapp-main.iml" filepath="$PROJECT_DIR$/.idea/equipo-c24-58-n-webapp-main.iml" />
-
     </modules>
   </component>
 </project>

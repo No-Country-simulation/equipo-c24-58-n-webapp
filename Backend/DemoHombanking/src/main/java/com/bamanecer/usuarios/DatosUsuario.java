@@ -5,6 +5,7 @@ public record DatosUsuario(
         String nombre,
         String email,
         String telefono,
-        String direccion
+        String direccion,
+        String estado
 ) {
 }
