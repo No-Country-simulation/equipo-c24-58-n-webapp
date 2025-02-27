@@ -1,25 +1,17 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/front/public/bamanecer.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Bienvenidos a BA</title>
-  </head>
+    <meta name="description" content="Banco Amanecer" />
+    <meta name="author" content="Banco Amanecer" />
 
+    <title>Banco Amanecer | Bamanecer</title>
+    <!-- <link href="./src/index.css" rel="stylesheet"> -->
+  </head>
   <body>
     <div id="root"></div>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-    <script type="text/babel" src="front/src/main.jsx"></script>
-
-    <div id="output"></div>
-    <!-- Load Babel -->
-    <!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
-    <script src=" https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <!-- Your custom script here -->
-    <script type="text/babel">
-      const getFilePath = () => { "front/src/main.jsx" }
-      document.getElementById('output').innerHTML = getFilePath();
-    </script>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
