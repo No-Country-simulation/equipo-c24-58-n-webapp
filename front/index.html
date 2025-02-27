@@ -9,7 +9,17 @@
 
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel" src="front/src/main.jsx"></script>
 
+    <div id="output"></div>
+    <!-- Load Babel -->
+    <!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+    <script src=" https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Your custom script here -->
+    <script type="text/babel">
+      const getFilePath = () => { "front/src/main.jsx" }
+      document.getElementById('output').innerHTML = getFilePath();
+    </script>
   </body>
 </html>
