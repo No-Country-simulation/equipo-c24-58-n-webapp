@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../contexts/AuthContext";
+import { useAuth } from "../hooks/useAuth";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -65,4 +65,4 @@ function Login() {
 
 export default Login;
 
-// Compare this snippet from src/pages/Register.jsx:
+// Compare this snippet from src/pages/Register.jsx
