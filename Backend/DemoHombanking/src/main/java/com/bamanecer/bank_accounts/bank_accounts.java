@@ -2,15 +2,15 @@ package com.bamanecer.bank_accounts;
 
 import jakarta.persistence.*;
 
-@Entity(name ="usuario")
-@Table(name="usuario")
+@Entity(name ="bank_accounts")
+@Table(name="bank_accounts")
 public class bank_accounts {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String nombre;
-    private String email;
-    private String telefono;
-    private String direccion;
+    private Long Num_Cuenta;
+    private Long DNI;
+    private long Saldo;
+    private String moneda;
+
 
 }
