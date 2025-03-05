@@ -17,4 +17,4 @@
 
 - Alejandro Anchundia - Front End React / Designer UX/UI - **GitHub: [https://github.com/anchundiatech](https://github.com/anchundiatech)**
 - Antonio Bueno Clavijo - Back End Java / Spring Security - **GitHub: [https://github.com/clavijoantonio](http://github.com/clavijoantonio)**
-- Beatriz Ebert - Back End Java / Analista Funcional - **GitHub: [https://github.com/Beaebert](https://github.com/Beaebert) **
+- Beatriz Ebert - Back End Java / Analista Funcional - **GitHub: [https://github.com/Beaebert](https://github.com/Beaebert)
