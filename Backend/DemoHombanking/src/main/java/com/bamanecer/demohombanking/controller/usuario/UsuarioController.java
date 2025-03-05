@@ -1,7 +1,7 @@
 package com.bamanecer.demohombanking.controller.usuario;
 
 import com.bamanecer.demohombanking.usuarios.DatosUsuario;
-import com.bamanecer.demohombanking.usuarios.IUsuarioRepository;
+import com.bamanecer.demohombanking.Repository.Usuario.IUsuarioRepository;
 import com.bamanecer.demohombanking.usuarios.Usuario;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;

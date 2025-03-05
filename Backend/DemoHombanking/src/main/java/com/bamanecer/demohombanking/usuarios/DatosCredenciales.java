@@ -1,10 +1,10 @@
 package com.bamanecer.demohombanking.usuarios;
 
 public record DatosCredenciales(
-        Long id,
-        long id_usuario,
-        String username,
-        String pasword_hash,
+        String usuario_id,
+        String usuario,
+        String password_hash,
         String perfil
 ) {
+
 }
