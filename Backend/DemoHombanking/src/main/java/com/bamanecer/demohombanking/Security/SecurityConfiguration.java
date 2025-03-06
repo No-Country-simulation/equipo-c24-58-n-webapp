@@ -1,5 +1,6 @@
 package com.bamanecer.demohombanking.Security;
 
+import com.bamanecer.demohombanking.util.RoleEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,8 +26,10 @@ public class SecurityConfiguration {
          return httpSecurity.csrf(csrf-> csrf.disable())
                  .sessionManagement(sm->sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                  .authorizeHttpRequests((authorizeHttpResquests)->
-                         authorizeHttpResquests.requestMatchers(HttpMethod.POST,"/login","/login/crear","usuario/crear").permitAll()
-                         .anyRequest()
+                         authorizeHttpResquests.requestMatchers(HttpMethod.POST,"/login","/login/crear","/usuario/crear").permitAll()
+                                 .requestMatchers("/admin/**").hasAnyRole(RoleEnum.ROLE_ADMIN.getSimpleName())
+                                 .requestMatchers("/user/**").hasAnyRole(RoleEnum.ROLE_USER.getSimpleName(),RoleEnum.ROLE_ADMIN.getSimpleName())
+                                 .anyRequest()
                          .authenticated()
                  )
                  .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)

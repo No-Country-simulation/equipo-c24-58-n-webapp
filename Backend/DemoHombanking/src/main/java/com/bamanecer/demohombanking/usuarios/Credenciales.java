@@ -1,5 +1,6 @@
 package com.bamanecer.demohombanking.usuarios;
 
+import com.bamanecer.demohombanking.util.RoleEnum;
 import jakarta.persistence.*;
 import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
@@ -19,13 +20,15 @@ public class Credenciales implements UserDetails {
     private int usuario_id;
     private String usuario;
     private String password_hash;
-    private String perfil;
+    @Enumerated(EnumType.STRING)
+    private RoleEnum perfil;
 
     public Credenciales (DatosCredenciales datosCredenciales){
 
         this.usuario_id= Integer.parseInt(datosCredenciales.usuario_id());
         this.usuario= datosCredenciales.usuario();
         this.password_hash= datosCredenciales.password_hash();
+        this.perfil= RoleEnum.valueOf(datosCredenciales.perfil());
     }
 
     public Credenciales(){
